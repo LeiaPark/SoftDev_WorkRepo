@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  {% block title %}
+  	Login 
+  {% endblock %}
+  
+  
+  
+</head>
+<body>
+  {% block body %}
+  
+  <h1> Enter the username & password, if you DARE! </h1>
+  
+  		{% if msg %}
+  		<h1>{{ msg }}</h1>
+  		{% endif %}
+  	<form action="/login" method="GET">
+  	  <input type="text" name="usrname">
+  	  <input type="password" name="passwd">
+  	  <input type="submit">
+  	</form>
+  {% endblock %}
+</body>
+</html>
