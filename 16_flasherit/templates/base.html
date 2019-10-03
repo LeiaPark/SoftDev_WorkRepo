@@ -1,39 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% block header %}
 <head>
-  {% block header %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <title>
-  	{% block title %}
-  	
-  		Blorbby Blorb
-  		
-  	{% endblock %}
-  </title>
-  
-  	Team Blorb: Leia Park & Jun Tao Lei <br>
-	SoftDev1 pd9 <br>
-	K#15 -- Do I Know You? <br>
-	2019-10-02 <br>
-  
-  {% endblock %}
+  <title>Team Blorb - {% block title %}{% endblock %}</title>
 </head>
-
+{% endblock %}
 <body>
-
+  <content>
   {% block body %}
-  <main>
-    Blorbby Blorbby Blorb
-  </main>
   {% endblock %}
-  
-  {% block footer %}
-    Team Blorb @ 2019
-  {% endblock %}
-  
+  </content>
+  <footer>
+    {% block footer %}
+    <h4>Team Blorb &copy; 2019</h4>
+    <h5>Leia Park & Jun Tao Lei</h5>
+    <h5>SoftDev1 Period 9</h5>
+    {% endblock %}
+  </footer>
 </body>
 </html>
