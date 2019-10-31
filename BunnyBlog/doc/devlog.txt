@@ -1,0 +1,109 @@
+ahmedS -- 2019-10-21 06:40 AM
+Added devlog and design document
+
+ahmedS -- 2019-10-21 10:06 AM
+Edited devlog, and actually pushed
+
+jeffL -- 2019-10-21 11:18 PM
+INNER JOIN checks corresponding columns in two tables and for shared values (ID) and combines information from both tables at this row as an entry in a new table. Value (ID) must exist in both tables.
+LEFT JOIN combines all the values (ID) from corresponding columns in two tables and aligns information in each row from both tables as an entry in a new table. Value (ID) may exist in one table but not in the other.
+CROSS JOIN performs Cartesian multiplication on a given number of table columns to create a new table of unique entries which each contain unique combination of column values.
+"Programming Sucks" has a humorous and satirical take on the most hair-pulling parts of programming. The author uses real life metaphors creatively to represent programming frustrations. Code will never be perfect!
+Actions for Success:
+- Checking devlog before work sessions to remain updated on latest changes and progress of teammates.
+- Cross-check each others code to ensure practicality and logical sense.
+- Comment frequently to make code more quickly comprehendible.
+
+ahmedS -- 2019-10-22 10:05 AM
+Edited design document (current version: v1) with the following changes:
+Slight reorganization
+Deletion of duplicate tasks section
+Creation of example tables in project database
+
+ahmedS -- 2019-10-22 02:31 PM
+Edited devlog.txt for clarity
+
+jeffL -- 2019-10-22 02:45 PM
+Added project flask template
+Made progress on Discover page HTML and linked to flask app
+
+leiaP -- 2019-10-25 02:35 PM
+Added prototype login html to test button link
+
+jeffL -- 2019-10-24 02:45 PM
+Finished Discover page visual layout
+Added buttons to link to login page
+
+leiaP -- 2019-10-24 10:40 PM
+Added login page HTML & register page HTML
+Added in-progress database containing users table
+Added Flask app with SQL functions for login/register pages
+
+jeffL -- 2019-10-25 02:10 AM
+Fixed login page formatting from Leia's progress
+Created template and converted HTML pages to children of template using Jinja
+Distinguished button functions for Discover page
+Updated README instructions
+Changes to design doc:
+- Added examples of databases for blogs and users
+- Explained changes in nature of site if user is logged into a session
+- Elaborated on methods of filtering databases
+
+ahmedS -- 2019-10-25 6:23 AM
+Made small changes to the README.md
+
+leiaP -- 2019-10-25 11:30 AM
+Edited Flask app for login/register pages
+Changed DB_FILE from "people.db" to "database.db"
+
+ahmedS -- 2019-10-25 2:58 PM
+Merged the two Flask apps we currently have
+Fixed some bugs in the Flask app
+Recreated the database to include the users and posts tables
+
+leiaP -- 2019-10-25 10:50 PM
+Edited to devlog
+Converted register page HTML to child of template using Jinja
+Added register page HTML to templates folder
+Edited discover page HTML to get a working register button
+
+jeffL -- 2019-10-26 02:49 AM
+Added to database for testing purposes
+Read in posts from database to Discover page with Jinja
+
+jeffL -- 2019-10-27 02:14 PM
+Added user side panel and search bar
+Reduced discover and userpages to single entrydisplay.html
+Search bar navigates to user pages
+
+jeffL -- 2019-10-27 09:16 PM
+Added form to submit entries on profile pages
+Created new child Jinja file of entrydisplay called profile for entry writing
+
+ahmedS -- 2019-10-28 03:41 AM
+Added login sessions and fixed register functionality
+
+jeffL -- 2019-10-28 04:42 AM
+Added logout function
+Added post filtering for profiles
+Adjusted entry displays to be chronological
+Changed button displays according to session
+
+ahmedS -- 2019-10-28 07:49 AM
+Fixed logout function
+Added functionality to view other people's profiles
+Edited more stuff in sessions
+
+ahmedS -- 2019-10-28 07:58 AM
+Added flashing error messages to register/login
+Submitted project by deadline
+
+jeffL -- 2019-10-28 11:42 PM
+Fixed bugs in page viewing from side user panel
+Reformatted error messages in register and login screen
+Added comments for readability
+
+ahmedS -- 2019-10-28 7:58 AM
+Added a few extra comments
+Edited design doc (currently: V2) with the following changes:
+Edited data structure tables to properly reflect the project
