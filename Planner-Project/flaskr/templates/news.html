@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}News{% endblock %}
+{% block content %}
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <form action="/home" method="GET">
+      <button class="btn btn-sm btn-outline-primary mt-3 mr-3" type="submit">Home</button>
+    </form>
+  </li>
+  <li class="nav-item">
+    <form action="/settings" method="GET">
+      <button class="btn btn-sm btn-outline-primary mt-3 mr-3" type="submit">Settings</button>
+    </form>
+  </li>
+  <li class="nav-item">
+    <form action="/logout" method="GET">
+      <button class="btn btn-sm btn-outline-primary mt-3 mr-3" type="submit">Logout</button>
+    </form>
+  </li>
+</ul>
+<div class="container my-5">
+  <div class="list-group">
+    <li class="list-group-item">
+      <div class="dropdown d-flex justify-content-end">
+        <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+          Sort
+        </button>
+        <div class="dropdown-menu">
+          <form action="/reddit/sort">
+            <input class="dropdown-item" type="submit" name="sortBy" value="Top">
+          </form>
+          <form action="/reddit/sort">
+            <input class="dropdown-item" type="submit" name="sortBy" value="Hot">
+          </form>
+          <form action="/reddit/sort">
+            <input class="dropdown-item" type="submit" name="sortBy" value="New">
+          </form>
+          <form action="/reddit/sort">
+            <input class="dropdown-item" type="submit" name="sortBy" value="Rising">
+          </form>
+          <form action="/reddit/sort">
+            <input class="dropdown-item" type="submit" name="sortBy" value="Controversial">
+          </form>
+        </div>
+      </div>
+    </li>
+    {% for article in news["data"]["children"] %}
+    <a href="{{ article['data']['url'] }}" class="list-group-item list-group-item-action">
+      <p class="mb-1">{{ article["data"]["title"] }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+<br>
+{% endblock %}
