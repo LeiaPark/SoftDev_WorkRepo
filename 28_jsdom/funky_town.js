@@ -1,7 +1,7 @@
-// Grace Mao and Leia Park
+// Connor Oh and Leia Park
 // SoftDev1 pd9
-// K27 -- Sequential Progression
-// 2019-12-10
+// K28 -- Sequential Progression II: Electric Boogaloo
+// 2019-12-11
 
 var fact = function(n) {
   if (n === 1) {
@@ -10,7 +10,7 @@ var fact = function(n) {
   return n * fact(n-1);
 }
 
-var fibonacci = function(n) {
+var fib = function(n) {
   if (n === 0) {
     return 0;
   }
@@ -42,4 +42,28 @@ var randomStudent = function() {
   var x = Math.random() * students.length;
   x = Math.floor(x);
   return students[x];
+}
+
+
+/* BUTTON FUNCTIONS */
+
+var fibButton = document.getElementById("fib");
+
+fibButton.onclick = function() {
+	document.getElementById("result").innerHTML = fib(15);
+	console.log(fib(15));
+}
+
+var gcdButton = document.getElementById("gcd");
+
+gcdButton.onclick = function() {
+	document.getElementById("result").innerHTML = gcd(1220, 516);
+	console.log(gcd(1220, 516));
+}
+
+var randStudButton = document.getElementById("randStudent");
+
+randStudButton.onclick = function() {
+	document.getElementById("result").innerHTML = randomStudent();
+	console.log(randomStudent());
 }
