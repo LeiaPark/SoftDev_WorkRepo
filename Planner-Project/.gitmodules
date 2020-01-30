@@ -1,3 +1,0 @@
-[submodule "flaskr/utl/flask_oauth2"]
-	path = flaskr/utl/flask_oauth2
-	url = https://github.com/juntaolei/flask_oauth2.git
