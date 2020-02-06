@@ -12,13 +12,13 @@
 <script src="clickdraw.js"></script>
 <body onload="setup()">
 	<button type="button" onclick="clearCanvas()">clear canvas</button>
-	<button type="button" onclick="makeRect()">draw rect</button>
+	<!-- <button type="button" onclick="makeRect()">draw rect</button> -->
 	<br>
-	<label class="switch">
-		<input type="checkbox">Rectangle Mode</input>
-		<input type="checkbox">Dot Mode</input>
-		<span class="slider"></span>
-	</label>
+	<select id="mode">
+		<option value="rect">Rectangle Mode</option>
+		<option value="dot">Dot Mode</option>
+		<option value="line">Line Mode</option>
+	</select>
 	<div>
 		<canvas height="600" width="600" id="slate">
 			Fallback text
