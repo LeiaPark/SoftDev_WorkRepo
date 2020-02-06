@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+	<style>
+		#slate {border: 1px solid black }
+	</style>
+  <!-- basic.html -->
+  <title>ClickDrawx</title>
+  <h1>Welcone</h1>
+  <meta charset = "UTF-8" />
+</head>
+<script src="clickdraw.js"></script>
+<body onload="setup()">
+	<button type="button" onclick="clearCanvas()">clear canvas</button>
+	<button type="button" onclick="makeRect()">draw rect</button>
+	<br>
+	<label class="switch">
+		<input type="checkbox">Rectangle Mode</input>
+		<input type="checkbox">Dot Mode</input>
+		<span class="slider"></span>
+	</label>
+	<div>
+		<canvas height="600" width="600" id="slate">
+			Fallback text
+		</canvas>
+	</div>
+</body>
