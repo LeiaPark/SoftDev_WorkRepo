@@ -11,11 +11,12 @@ var change = 1;
 var id = 0;
 
 
-function clear() {
+function clear(e) {
 	ctx.clearRect(0, 0, 500, 500);
 }
 
 function startAnim() {
+	window.cancelAnimationFrame(id);
 	if (radius == 250) {
 		change = -1;
 	}
