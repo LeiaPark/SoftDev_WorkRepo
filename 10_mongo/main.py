@@ -34,24 +34,30 @@ def getParty(party):
                 print("{name: %s}" % value)
 
 # get the details of a specific US representative
-def findPerson(name):
-    data = collection.find({"name": name})
+def findPerson(fname, lname):
+    data = collection.find({"firstname": fname, "lastname": lname})
     for item in data:
         pprint.pprint(item)
 
 # get the phone number of a US representative
-def getPhoneNum(name):
-    data = collection.find({"name": name})
+def getPhoneNum(fname, lname):
+    data = collection.find({"firstname": fname, "lastname": lname})
     for item in data:
         for key, value in data.items():
             if key == "phone":
                 print("{phone: %s}" % value)
 
 # get the address of representative's office
-def getOffice(name):
-    data = collection.find({"name": name})
+def getOffice(fname, lname):
+    data = collection.find({"firstname": fname, "lastname": lname})
     for item in data:
         for key, value in data.items():
             if key == "office":
                 print("{office %s}" % value)
         
+
+# TEST
+getParty("Democrat")
+findPerson("Kevin", "Brady")
+getPhoneNum("Jim", "Cooper")
+getOffice("Sheila", "Jackson Lee")
