@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form action="/roles">
+  Input ID Number:
+  <input class="form-control" type="text" name="number">
+  <input class="btn btn-dark" type="submit" name="submit">
+</form>
+{% for item in ID %}
+  {{item['Name']}}
+{% endfor %}
+{% endblock %}

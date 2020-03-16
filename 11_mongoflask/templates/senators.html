@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form action="/senators">
+  Senators by Gender:
+  <input class="form-control" type="text" name="gender">
+  <input class="btn btn-dark" type="submit" name="submit">
+</form>
+<ul>
+  {% for person in gender %}
+    <li>{{person['person']['name']}}</li>
+  {% endfor %}
+</ul>
+
+<form action="/senators">
+  Senators by State
+  <input class="form-control" type="text" name="state">
+  <input class="btn btn-dark" type="submit" name="submit">
+</form>
+<ul>
+  {% for person in state %}
+    <li>{{person['person']['name']}}</li>
+  {% endfor %}
+</ul>
+
+<form action="/senators">
+  Senators by Party:
+  <input class="form-control" type="text" name="party">
+  <input class="btn btn-dark" type="submit" name="submit">
+</form>
+<ul>
+  {% for person in party %}
+    <li>{{person['person']['name']}}</li>
+  {% endfor %}
+</ul>
+
+<form action="/senators">
+  Senator's Website by first name
+  <input class="form-control" type="text" name="name">
+  <input class="btn btn-dark" type="submit" name="submit">
+</form>
+<ul>
+  {% for person in fname %}
+    <li>{{person['person']['name']}}: {{person['website']}}</li>
+  {% endfor %}
+</ul>
+
+<form action="/senators">
+  Senator's Description by last name
+  <input class="form-control" type="text" name="name">
+  <input class="btn btn-dark" type="submit" name="submit">
+</form>
+<ul>
+  {% for person in lname %}
+    <li>{{person['person']['name']}}: {{person['description']}}</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
