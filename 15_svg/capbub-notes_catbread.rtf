@@ -1,0 +1,65 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Team Catbread: Leia Park & Kiran Vuksanaj\
+SoftDev pd 9\
+K15: Capture Bubble Toil Trouble\
+2020-04-01\
+\
+1.\
+Prediction: \
+- a chart of names will be displayed on the webpage\
+- upon clicking the names, the clicky function will activate and show an alert of the selected name\
+\
+Observations:\
+- a 2 x 3 chart is displayed\
+- names of Star Wars characters are in each box\
+- when clicking a name, an alert is displayed that simply says the name\
+- clicking surrounding area gives no effect\
+\
+2.\
+Prediction: \
+- a chart of names is displayed\
+- upon clicking the names, the clicky function activates and shows an alert of the selected name\
+- once it shows the name alert, it will activate the clicky function again and this time show the names in the same row\
+\
+Observations:\
+- clicking a name shows an alert simply displaying the name\
+- after pressing ok on the alert, another alert pops up showing the row of names the name belongs to\
+- after pressing ok for that alert, a third alert pops up displaying all the names in the table\
+\
+Comments:\
+- because there is an \'93addEventListener\'94 for the whole table, clicking on the table shows the names in the entire table\
+- however, the alert displays the HTML that contains the names instead of only the names\
+- same for the when the alert displays the row of names\
+\
+3. \
+Prediction:\
+- when \'93stopPropagation\'94 is commented out, the alerts will follow in the same order as the previous folder\
+- when \'93stopPropagation\'94 is uncommented, the alert that displays all the names will pop out but the others will not show\
+\
+Observations:\
+- when \'93stopPropagation\'94 is commented out, the first alert that displays contains all the names, then the name selected, and then the row of names\
+-  when \'93stopPropagation\'94 is uncommented, the alert that displays all the names popped out but the other alerts did not\
+\
+Questions:\
+- how does adding a \'93true\'94 result in an alert to be the first to pop out?\
+- how does adding a \'93true\'94 make the alert an exception to the \'93stopPropagation\'94?\
+\
+4.\
+Prediction:\
+- when \'93stopPropagation\'94 is commented out, the alerts will pop out in the same order as in folder 2 (only the name, the row of names, all of the names)\
+- when \'93stopPropagation\'94 is uncommented, the alerts will pop out in the same order as stated above\
+\
+Observations:\
+- the order of the alerts goes backwards: all the names pop up, then the row of names, and then the selected name\
+- when \'93stopPropagation\'94 is uncommented, only the alert with all the names pops up\
+\
+Comments:\
+- it seems \'93true\'94 reverses the order by giving priority to the latest clicked object\
+- because \'93stopPropagation\'94 is after the alert function in the clicky function, one alert is able to pop up before the next one is prevented\
+}
