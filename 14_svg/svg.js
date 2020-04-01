@@ -24,22 +24,22 @@ var draw = function(e) {
 
 var movesvg = function(e) {
     circles = pic.children;  
-    for (i = 0; i < circles.length; i++ ) { 
+    for (i = 0; i < circles.length; i++) { 
 		var circle = circles[i]
 		var cx = parseInt(circle.getAttribute("cx")); 
 		var cy = parseInt(circle.getAttribute("cy"));
 		var vx = parseInt(circle.getAttribute("vx"));
 		var vy = parseInt(circle.getAttribute("vy"));
-		if ( cx >= 490 ) {  
+		if (cx >= 490) {  
 		    circle.setAttribute("vx",-3);
 		}
 		else if (cx <= 10) { 
 		    circle.setAttribute("vx",3);
 		}
-		if( cy >= 490 ) { 
+		if(cy >= 490) { 
 		    circle.setAttribute("vy",-3);
 		}
-		else if ( cy <= 10 ){ 
+		else if (cy <= 10){ 
 		    circle.setAttribute("vy",3);
 		}	
 		circle.setAttribute("cx",cx + vx);
@@ -63,21 +63,26 @@ var clearsvg = function(e) {
     id = 0;
 }
 
+var getRandomColor = function(e) {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
 var xtrasvg = function(e) {
-	circles = pic.children;
-	for (i = 0; i < circles.length; i++) {
-		var circle = circles[i]
-		var cx = parseInt(circle.getAttribute("cx")); 
-		var cy = parseInt(circle.getAttribute("cy"));
-		var vx = parseInt(circle.getAttribute("vx"));
-		var vy = parseInt(circle.getAttribute("vy"));
-	
-	}
+    circles = pic.children;  
+    for (i = 0; i < circles.length; i++) {
+    	var c = circle[i];
+    	c.setAttribute("fill", getRandomColor);
+    }
 }
 
 var xtra = function(e) {
     window.cancelAnimationFrame(id);
-    id = window.requestAnimationFrame(xtra);
+    id = window.requestAnimationFrame(xtrasvg);
 }
 
 var clearbutton = document.getElementById("clear");
