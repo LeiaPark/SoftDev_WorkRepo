@@ -1,0 +1,9 @@
+Notes
+- agree w/ the introduction: using and breaking an example leads to learning & it’s being resourceful
+- this reading for #6 makes me more appreciative of d3
+- d3 is very helpful for quick statistics
+- very flexible and malleable; the dynamic data is interesting in that it enables user to alter
+- the interactive animation is cool; seems very graph/chart focused 
+- really like the d3.selectall() function; easily grabs all related variables to affect
+- simplistic and efficient when organizing and displaying data & when coding
+- transition is also cool
