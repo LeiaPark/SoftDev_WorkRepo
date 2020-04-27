@@ -59,7 +59,7 @@ while i < len(names):
                
 @app.route("/")
 def root():
-    return render_template("home.html", ulticereals = ulticereals, names = names)
+    return render_template("main.html", ulticereals = ulticereals, names = names)
 
 if __name__ == "__main__":
     app.debug = True
